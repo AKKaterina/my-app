@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Button, CategoryMops } from './component';
+import { cameraImg, chatImg, fireImg, headphoneImg, icon5Img, loopImg, noteImg, tapeImg } from './img';
+import './scss/index.scss'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <div>
+        <Navbar />
+        <Button textBtn={'open'} />
+        <Button textBtn={'exit'} />
+        <CategoryMops imgUrl={cameraImg} />
+        <CategoryMops imgUrl={chatImg} />
+        <CategoryMops imgUrl={fireImg} />
+        <CategoryMops imgUrl={headphoneImg} />
+        <CategoryMops imgUrl={noteImg} />
+        <CategoryMops imgUrl={loopImg} />
+        <CategoryMops imgUrl={tapeImg} />
+        <CategoryMops imgUrl={icon5Img} />
+      </div>
     </div>
   );
 }
